@@ -14,6 +14,9 @@ matrix:
 
 before_install:
   - git clone https://github.com/IBM-Swift/Package-Builder.git BluePic-Server/Package-Builder
+  - cd Package-Builder
+  - git checkout issue.cleanup_code
+  - cd ..
   - git clone -b master https://$GITHUB_USER:$GITHUB_PWD@github.com/IBM-Swift/Testing-Credentials.git
 
 script:
