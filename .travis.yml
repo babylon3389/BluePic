@@ -13,10 +13,7 @@ matrix:
       osx_image: xcode8
 
 before_install:
-  - git clone https://github.com/IBM-Swift/Package-Builder.git BluePic-Server/Package-Builder
-  - cd BluePic-Server/Package-Builder
-  - git checkout issue.reenable_special_build
-  - cd $TRAVIS_BUILD_DIR
+  - git clone -b develop https://github.com/IBM-Swift/Package-Builder.git BluePic-Server/Package-Builder
   - git clone -b master https://$GITHUB_USER:$GITHUB_PWD@github.com/IBM-Swift/Testing-Credentials.git
 
 script:
